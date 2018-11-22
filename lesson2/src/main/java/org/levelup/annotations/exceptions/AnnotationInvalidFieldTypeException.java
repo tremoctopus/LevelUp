@@ -1,4 +1,4 @@
-package exceptions;
+package org.levelup.annotations.exceptions;
 
 public class AnnotationInvalidFieldTypeException extends IllegalArgumentException {
 

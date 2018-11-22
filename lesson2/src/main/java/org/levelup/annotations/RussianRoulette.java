@@ -1,3 +1,5 @@
+package org.levelup.annotations;
+
 import java.math.BigDecimal;
 
 public class RussianRoulette {
@@ -21,7 +23,7 @@ public class RussianRoulette {
 
     public void guess(int number) {
         if (number == this.number) {
-            System.out.println("You are died...");
+            System.out.println("You are dead...");
         }else{
             System.out.println("You're alive!");
         }

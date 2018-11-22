@@ -1,4 +1,6 @@
-import exceptions.AnnotationInvalidFieldTypeException;
+package org.levelup.annotations;
+
+import org.levelup.annotations.exceptions.AnnotationInvalidFieldTypeException;
 
 import java.lang.reflect.Field;
 import java.util.Random;
