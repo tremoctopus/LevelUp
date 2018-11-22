@@ -2,8 +2,12 @@ import exceptions.AnnotationInvalidFieldTypeException;
 
 import java.lang.reflect.Field;
 import java.util.Random;
+import java.util.logging.Logger;
 
 public class RandomIntAnnotationProcessor {
+
+    private static Logger log = Logger.getLogger(RandomIntAnnotationProcessor.class.getName());
+
     public static void setField(Object object) throws IllegalAccessException {
         Class<?> objectClass = object.getClass();
         Field[] fields = objectClass.getDeclaredFields();
@@ -16,7 +20,7 @@ public class RandomIntAnnotationProcessor {
                 try {
                     setFieldValue(field, object, number);
                 } catch (AnnotationInvalidFieldTypeException e) {
-                    e.printStackTrace();
+                    log.throwing(RandomIntAnnotationProcessor.class.getName(), "setField", e);
                 }
             }
         }
