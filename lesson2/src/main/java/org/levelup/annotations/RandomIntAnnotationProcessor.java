@@ -35,7 +35,10 @@ public class RandomIntAnnotationProcessor {
             field.setAccessible(true);
             field.set(o, value);
         }else {
-            throw new AnnotationInvalidFieldTypeException("Field type is not valid. Required: Integer, found: " + typeName);
+            throw new AnnotationInvalidFieldTypeException("Field type of "
+                    + field.getName()
+                    + " of class " + o.getClass().getName()
+                    + " is not valid. Required: Integer, found: " + typeName);
         }
     }
 
